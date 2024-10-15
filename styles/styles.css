@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+body {
+  background-color: #313e51;
+  background-image: url("../assets/images/dark.svg");
+}
+
+main #container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10dvh;
+}
+main #container .title {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-size: 3rem;
+}
+main #container .text {
+  color: #abc1e1;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 5dvh;
+}
+main #container #html .quiz-button-html {
+  background-color: #384d66;
+  width: 70dvh;
+  height: 8dvh;
+  color: #fff;
+  font-size: 1.5rem;
+  gap: 2dvh;
+  border: none;
+  border-radius: 2dvh;
+  margin-bottom: 3dvh;
+  cursor: pointer;
+}
+main #container #html .quiz-button-html i {
+  color: #f78a6e;
+  padding-right: 2dvh;
+}
+main #container #css .quiz-button-css {
+  background-color: #384d66;
+  width: 70dvh;
+  height: 8dvh;
+  color: #fff;
+  font-size: 1.5rem;
+  gap: 2dvh;
+  border: none;
+  border-radius: 2dvh;
+  margin-bottom: 3dvh;
+  cursor: pointer;
+}
+main #container #css .quiz-button-css i {
+  color: rgba(138, 230, 179, 0.862745098);
+  padding-right: 2dvh;
+}
+main #container #javascript .quiz-button-javascript {
+  background-color: #384d66;
+  width: 70dvh;
+  height: 8dvh;
+  color: #fff;
+  font-size: 1.5rem;
+  gap: 2dvh;
+  border: none;
+  border-radius: 2dvh;
+  margin-bottom: 3dvh;
+  cursor: pointer;
+}
+main #container #javascript .quiz-button-javascript i {
+  color: rgba(49, 73, 179, 0.87);
+  padding-right: 2dvh;
+}
+main #container #accessibility .quiz-button-accessibility {
+  background-color: #384d66;
+  width: 70dvh;
+  height: 8dvh;
+  color: #fff;
+  font-size: 1.5rem;
+  gap: 2dvh;
+  border: none;
+  border-radius: 2dvh;
+  margin-bottom: 3dvh;
+  cursor: pointer;
+}
+main #container #accessibility .quiz-button-accessibility i {
+  color: rgba(233, 102, 233, 0.349);
+  padding-right: 2dvh;
+}/*# sourceMappingURL=styles.css.map */

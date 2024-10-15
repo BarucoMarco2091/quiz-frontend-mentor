@@ -1,14 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Frontend Quiz App</title>
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <header>
+        
+    </header>
+    <main>
+        <div id="container">
+            <h1 class="title">Welcome to the <strong>Frontend<br>Quiz!</strong></h1>
+            <span class="text">Pick a subject to get started.</span>
+            <div id="html">
+                <button class="quiz-button-html" onclick="html()"><i class="fa-brands fa-html5"></i>HTML</button>
+            </div>
+            <div id="css">
+                <button class="quiz-button-css" onclick="css()"><i class="fa-brands fa-css3-alt"></i>CSS</button>
+            </div>
+            <div id="javascript">
+                <button class="quiz-button-javascript" onclick="javascript()"><i class="fa-brands fa-js"></i>JavaScript</button>
+            </div>
+            <div id="accessibility">
+                <button class="quiz-button-accessibility" onclick="accessibility()"><i class="fa-solid fa-person"></i>Accessibility</button>
+            </div>
+        </div>
+    </main>
     <footer></footer>
     <script src="script/script.js"></script>
 </body>
