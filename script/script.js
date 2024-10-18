@@ -43,53 +43,8 @@ const htmlData = [
     },
 ];
 
-const cssData = [
-    {
-        icon: "assets/images/icon-css.svg",
-        numQuestion: 1,
-        question: "What does CSS stand for?",
-        alternatives: ["Colorful Style Sheets", "Computer Style Sheets", "Cascading Style Sheets", "Creative Style Sheets"],
-        correct: 2,
-    },
-    {
-        icon: "assets/images/icon-css.svg",
-        numQuestion: 2,
-        question: "Which HTML attribute is used to define inline styles?",
-        alternatives: ["styles", "style", "class", "font-style"],
-        correct: 1,
-    },
-    {
-        icon: "assets/images/icon-css.svg",
-        numQuestion: 3,
-        question: "How do you insert a comment in a CSS file?",
-        alternatives: ["// this is a comment //", "/* this is a comment */", "-- this is a comment --", "<!-- this is a comment -->"],
-        correct: 1,
-    },
-    {
-        icon: "assets/images/icon-css.svg",
-        numQuestion: 4,
-        question: "Which property is used to change the background color of an element?",
-        alternatives: ["color", "bgcolor", "background-color", "background"],
-        correct: 2,
-    },
-    {
-        icon: "assets/images/icon-css.svg",
-        numQuestion: 5,
-        question: "How do you apply a style to all <p> elements?",
-        alternatives: ["p { }", ".p { }", "#p { }", "all.p { }"],
-        correct: 0,
-    },
-    {
-        icon: "assets/images/icon-css.svg",
-        numQuestion: 6,
-        question: "Which property is used to change the font of an element?",
-        alternatives: ["font-style", "text-style", "font-family", "typeface"],
-        correct: 2,
-    },
-];
-
 let score = 0;
-let currentQuestion = 0;
+let htmlCurrentQuestion = 0;
 let selectedAnswerIndex = null;
 
 const htmlButton = document.querySelector('.quiz-button-html');
@@ -99,22 +54,22 @@ htmlButton.addEventListener('click', function htmlLoadQuiz() {
 
     const icon = document.createElement('img');
     icon.className = 'icon-img';
-    icon.src = htmlData[currentQuestion].icon;
+    icon.src = htmlData[htmlCurrentQuestion].icon;
     icon.alt = 'html-icon';
     container.appendChild(icon);
 
     const numberQuestion = document.createElement('span');
     numberQuestion.className = 'number-question';
-    numberQuestion.innerHTML = `<span>Question ${htmlData[currentQuestion].numQuestion} of 6`;
+    numberQuestion.innerHTML = `<span>Question ${htmlData[htmlCurrentQuestion].numQuestion} of 6`;
     container.appendChild(numberQuestion);
 
     const quizContainer = document.createElement('div');
     quizContainer.className = 'section-quiz';
-    quizContainer.innerHTML = `<h2>${htmlData[currentQuestion].question}</h2>`;
+    quizContainer.innerHTML = `<h2>${htmlData[htmlCurrentQuestion].question}</h2>`;
     container.appendChild(quizContainer);
 
     // Loop para criar os botões de alternativas
-    htmlData[currentQuestion].alternatives.forEach((alternative, index) => {
+    htmlData[htmlCurrentQuestion].alternatives.forEach((alternative, index) => {
         const buttonAlternative = document.createElement('button');
         buttonAlternative.className = 'button-answers';
         buttonAlternative.textContent = alternative;
@@ -151,7 +106,7 @@ htmlButton.addEventListener('click', function htmlLoadQuiz() {
         // Mostra a resposta correta e incorreta
         const allButtons = document.querySelectorAll('.button-answers');
         allButtons.forEach((button, index) => {
-            if (index === htmlData[currentQuestion].correct) {
+            if (index === htmlData[htmlCurrentQuestion].correct) {
                 button.style.border = '2px solid green'; // Resposta correta
             } else {
                 button.style.border = '2px solid red'; // Resposta incorreta
@@ -159,7 +114,7 @@ htmlButton.addEventListener('click', function htmlLoadQuiz() {
         });
 
         // Incrementa a pontuação se a resposta estiver correta
-        if (selectedAnswerIndex === htmlData[currentQuestion].correct) {
+        if (selectedAnswerIndex === htmlData[htmlCurrentQuestion].correct) {
             score++;
         }
 
@@ -170,9 +125,9 @@ htmlButton.addEventListener('click', function htmlLoadQuiz() {
         setTimeout(function () {
             selectedAnswerIndex = null;
             nextButton.disabled = false;
-            currentQuestion++;
+            htmlCurrentQuestion++;
 
-            if (currentQuestion < htmlData.length) {
+            if (htmlCurrentQuestion < htmlData.length) {
                 htmlLoadQuiz(); // Carrega a próxima pergunta
             } else {
                 container.innerHTML = `<p>Quiz completo! Pontuação: ${score}/${htmlData.length}</p>`;
@@ -181,40 +136,3 @@ htmlButton.addEventListener('click', function htmlLoadQuiz() {
     });
 });
 
-const cssQuizButton = document.querySelector('.quiz-button-css');
-cssQuizButton.addEventListener('click', function cssLoadQuiz() {
-    const container = document.getElementById('container');
-    container.innerHTML = '';
-
-    const cssIcon = document.createElement('img');
-    cssIcon.className = 'css-icon';
-    cssIcon.src = cssData[currentQuestion].icon;
-    cssIcon.alt = 'css-icon';
-    container.appendChild(cssIcon);
-
-    const numQuestion = document.createElement('span');
-    numQuestion.className = 'number-question';
-    numQuestion.innerHTML = `<span>Question ${cssData[currentQuestion].numQuestion} of 6</span>`;
-    container.appendChild(numQuestion);
-
-    const cssContainer = document.createElement('div');
-    cssContainer.className = 'css-container';
-    cssContainer.innerHTML = `<h2>${cssData[currentQuestion].question}</h2>`;
-    container.appendChild(cssContainer);
-
-    cssData[currentQuestion].alternatives.forEach(alternatives => {
-        const buttonAlternative = document.createElement('button');
-        buttonAlternative.className = 'button-answers';
-        buttonAlternative.textContent = alternatives;
-        container.appendChild(buttonAlternative);
-    });
-
-    const nextButton = document.createElement('button');
-    nextButton.className = 'next-button';
-    nextButton.textContent = 'Next';
-    container.appendChild(nextButton);
-
-    nextButton.addEventListener('click', function() {
-
-    });
-});
