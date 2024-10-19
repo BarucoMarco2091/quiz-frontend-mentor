@@ -56,4 +56,40 @@ acButtonQuiz.addEventListener('click', function accessibilityLoadQuiz() {
     acIcon.className = 'accessibility-icon';
     acIcon.src = accessibilityData[accessibilityCurrentQuestion].icon;
     container.appendChild(acIcon);
+
+    const numberQuestion = document.createElement('span');
+    numberQuestion.className = 'number-question';
+    numberQuestion.innerHTML = `Question ${accessibilityData[accessibilityCurrentQuestion].numQuestion} of 6`;
+    container.appendChild(numberQuestion);
+
+    const accessibilityQuestions = document.createElement('h2');
+    accessibilityQuestions.className = 'accessibility-questions';
+    accessibilityQuestions.innerHTML = `<h2>${accessibilityData[accessibilityCurrentQuestion].question}</h2>`;
+    container.appendChild(accessibilityQuestions);
+
+    accessibilityData[accessibilityCurrentQuestion].alternatives.forEach(alternatives => {
+        const buttonAlternative = document.createElement('button');
+        buttonAlternative.className = 'button-answers';
+        buttonAlternative.innerHTML = alternatives;
+        buttonAlternative.addEventListener('click', function () {
+            acSelectedAnswerIndex = index;
+            const allButtons = document.querySelectorAll('.button-answers');
+            allButtons.forEach(button => {
+                button.classList.remove('selected');
+                button.style.border = '';
+            });
+            buttonAlternative.classList.add('selected');
+            buttonAlternative.style.border = '2px solid purple';
+        });
+        container.appendChild(buttonAlternative);
+    });
+
+    const nextButton = document.createElement('button');
+    nextButton.className = 'next-button';
+    nextButton.innerHTML = 'Next';
+    container.appendChild(nextButton);
+
+    nextButton.addEventListener('click', function () {
+
+    });
 });
