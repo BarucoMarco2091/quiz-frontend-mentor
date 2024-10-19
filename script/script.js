@@ -85,7 +85,7 @@ htmlButton.addEventListener('click', function htmlLoadQuiz() {
                 button.style.border = ''; // Reseta as bordas
             });
             buttonAlternative.classList.add('selected');
-            buttonAlternative.style.border = '2px solid blue'; // Destaca o botão selecionado
+            buttonAlternative.style.border = '2px solid purple'; // Destaca o botão selecionado
         });
 
         container.appendChild(buttonAlternative);
@@ -110,7 +110,7 @@ htmlButton.addEventListener('click', function htmlLoadQuiz() {
                 button.style.border = '2px solid green'; // Resposta correta
             } else {
                 button.style.border = '2px solid red'; // Resposta incorreta
-            }
+            };
         });
 
         // Incrementa a pontuação se a resposta estiver correta

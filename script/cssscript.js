@@ -101,7 +101,7 @@ cssQuizButton.addEventListener('click', function cssLoadQuiz() {
         const allButtons = document.querySelectorAll('.button-answers');
         allButtons.forEach((button, index) => {
             if (index === cssData[cssCurrentQuestion].correct) {
-                button.style.border = '2px solid blue'; // Resposta correta
+                button.style.border = '2px solid green'; // Resposta correta
             } else {
                 button.style.border = '2px solid red'; // Resposta incorreta
             };
