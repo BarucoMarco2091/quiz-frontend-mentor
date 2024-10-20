@@ -29,6 +29,15 @@ main {
         align-items: center;
         margin-top: 10dvh;
 
+        @media screen and (max-width: 480px) {
+            display: flex;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+
         .title {
             color: $text-color;
             font-family: 'Rubik', sans-serif;
@@ -132,7 +141,7 @@ main {
         }
 
         .number-question {
-            color: $text-color;
+            color: $text-color-p;
             font-family: 'Rubik', sans-serif;
             margin-top: 1rem;
         }
@@ -176,20 +185,6 @@ main {
             font-family: 'Rubik', sans-serif;
             font-size: 1.5rem;
             text-align: center;
-        }
-
-        .button-play-again {
-            background-color: $button-bg;
-            width: 70dvh;
-            height: 8dvh;
-            color: $text-color;
-            font-family: 'Rubik', sans-serif;
-            font-size: 1.5rem;
-            gap: 2dvh;
-            border: none;
-            border-radius: 2dvh;
-            margin-bottom: 3dvh;
-            cursor: pointer;
         }
     }
 }

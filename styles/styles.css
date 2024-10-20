@@ -13,6 +13,16 @@ main #container {
   align-items: center;
   margin-top: 10dvh;
 }
+@media screen and (max-width: 480px) {
+  main #container {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+}
 main #container .title {
   color: #fff;
   font-family: "Rubik", sans-serif;
@@ -94,7 +104,7 @@ main #container #accessibility .quiz-button-accessibility i {
   padding-right: 2dvh;
 }
 main #container .number-question {
-  color: #fff;
+  color: #abc1e1;
   font-family: "Rubik", sans-serif;
   margin-top: 1rem;
 }
@@ -134,17 +144,4 @@ main #container .results {
   font-family: "Rubik", sans-serif;
   font-size: 1.5rem;
   text-align: center;
-}
-main #container .button-play-again {
-  background-color: #384d66;
-  width: 70dvh;
-  height: 8dvh;
-  color: #fff;
-  font-family: "Rubik", sans-serif;
-  font-size: 1.5rem;
-  gap: 2dvh;
-  border: none;
-  border-radius: 2dvh;
-  margin-bottom: 3dvh;
-  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

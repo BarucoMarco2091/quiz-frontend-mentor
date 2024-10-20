@@ -98,7 +98,7 @@ jsQuizButton.addEventListener('click', function javascriptLoadQuiz() {
         };
 
         if (jsSelectedAnswerIndex === javascriptData[jsCurrentQuestion].correct) {
-            jsScore++
+            jsScore++;
         };
 
         const allButtons = document.querySelectorAll('.button-answers');
@@ -106,7 +106,7 @@ jsQuizButton.addEventListener('click', function javascriptLoadQuiz() {
             if (index === javascriptData[jsCurrentQuestion].correct) {
                 button.style.border = '2px solid green';
             } else {
-                button.style.border = '2px solid red'
+                button.style.border = '2px solid red';
             };
         });
 

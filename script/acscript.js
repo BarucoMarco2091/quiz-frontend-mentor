@@ -113,7 +113,7 @@ acButtonQuiz.addEventListener('click', function accessibilityLoadQuiz() {
         setTimeout(function() {
             acSelectedAnswerIndex = null;
             nextButton.disabled = false;
-            accessibilityCurrentQuestion++
+            accessibilityCurrentQuestion++;
             if(accessibilityCurrentQuestion < accessibilityData.length) {
                 accessibilityLoadQuiz();
             } else {

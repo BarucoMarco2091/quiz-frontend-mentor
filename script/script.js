@@ -131,8 +131,7 @@ htmlButton.addEventListener('click', function htmlLoadQuiz() {
                 htmlLoadQuiz(); // Carrega a próxima pergunta
             } else {
                 container.innerHTML = `<p class="results">Quiz completo! Pontuação: ${score}/${htmlData.length}</p>`;
-            }
-
+            };
         }, 2000); // 2 segundos de delay antes de ir para a próxima pergunta
     });
 });
