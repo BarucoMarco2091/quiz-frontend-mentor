@@ -63,7 +63,7 @@ jsQuizButton.addEventListener('click', function javascriptLoadQuiz() {
     container.appendChild(numQuestion);
 
     const jsQuestion = document.createElement('h2');
-    jsQuestion.className = 'js-question';
+    jsQuestion.className = 'section-quiz';
     jsQuestion.innerHTML = `<h2>${javascriptData[jsCurrentQuestion].question}</h2>`;
     container.appendChild(jsQuestion);
 
@@ -119,7 +119,7 @@ jsQuizButton.addEventListener('click', function javascriptLoadQuiz() {
             if (jsCurrentQuestion < javascriptData.length) {
                 javascriptLoadQuiz();
             } else {
-                container.innerHTML = `<p>Quiz completo! Pontuação: ${jsScore}/${javascriptData.length}</p>`;
+                container.innerHTML = `<p class="results">Quiz completo! Pontuação: ${jsScore}/${javascriptData.length}</p>`;
             };
         }, 2000);
     });

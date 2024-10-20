@@ -63,7 +63,7 @@ htmlButton.addEventListener('click', function htmlLoadQuiz() {
     numberQuestion.innerHTML = `<span>Question ${htmlData[htmlCurrentQuestion].numQuestion} of 6`;
     container.appendChild(numberQuestion);
 
-    const quizContainer = document.createElement('div');
+    const quizContainer = document.createElement('h2');
     quizContainer.className = 'section-quiz';
     quizContainer.innerHTML = `<h2>${htmlData[htmlCurrentQuestion].question}</h2>`;
     container.appendChild(quizContainer);
@@ -130,8 +130,9 @@ htmlButton.addEventListener('click', function htmlLoadQuiz() {
             if (htmlCurrentQuestion < htmlData.length) {
                 htmlLoadQuiz(); // Carrega a próxima pergunta
             } else {
-                container.innerHTML = `<p>Quiz completo! Pontuação: ${score}/${htmlData.length}</p>`;
+                container.innerHTML = `<p class="results">Quiz completo! Pontuação: ${score}/${htmlData.length}</p>`;
             }
+
         }, 2000); // 2 segundos de delay antes de ir para a próxima pergunta
     });
 });

@@ -50,6 +50,7 @@ main {
                 width: 70dvh;
                 height: 8dvh;
                 color: $text-color;
+                font-family: 'Rubik', sans-serif;
                 font-size: 1.5rem;
                 gap: 2dvh;
                 border: none;
@@ -65,12 +66,13 @@ main {
         }
 
         #css {
-            
+
             .quiz-button-css {
                 background-color: $button-bg;
                 width: 70dvh;
                 height: 8dvh;
                 color: $text-color;
+                font-family: 'Rubik', sans-serif;
                 font-size: 1.5rem;
                 gap: 2dvh;
                 border: none;
@@ -92,6 +94,7 @@ main {
                 width: 70dvh;
                 height: 8dvh;
                 color: $text-color;
+                font-family: 'Rubik', sans-serif;
                 font-size: 1.5rem;
                 gap: 2dvh;
                 border: none;
@@ -113,6 +116,7 @@ main {
                 width: 70dvh;
                 height: 8dvh;
                 color: $text-color;
+                font-family: 'Rubik', sans-serif;
                 font-size: 1.5rem;
                 gap: 2dvh;
                 border: none;
@@ -125,6 +129,67 @@ main {
                     padding-right: 2dvh;
                 }
             }
+        }
+
+        .number-question {
+            color: $text-color;
+            font-family: 'Rubik', sans-serif;
+            margin-top: 1rem;
+        }
+
+        .section-quiz {
+            color: $text-color;
+            font-family: 'Rubik', sans-serif;
+            font-size: 2rem;
+        }
+
+        .button-answers {
+            background-color: $button-bg;
+            width: 70dvh;
+            height: 8dvh;
+            color: $text-color;
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.2rem;
+            gap: 2dvh;
+            border: none;
+            border-radius: 2dvh;
+            margin-bottom: 3dvh;
+            cursor: pointer;
+        }
+
+        .next-button {
+            background-color: $button-bg;
+            width: 70dvh;
+            height: 8dvh;
+            color: $text-color;
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.5rem;
+            gap: 2dvh;
+            border: none;
+            border-radius: 2dvh;
+            margin-bottom: 3dvh;
+            cursor: pointer;
+        }
+
+        .results {
+            color: $text-color;
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .button-play-again {
+            background-color: $button-bg;
+            width: 70dvh;
+            height: 8dvh;
+            color: $text-color;
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.5rem;
+            gap: 2dvh;
+            border: none;
+            border-radius: 2dvh;
+            margin-bottom: 3dvh;
+            cursor: pointer;
         }
     }
 }

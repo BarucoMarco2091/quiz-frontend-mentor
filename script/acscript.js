@@ -63,14 +63,14 @@ acButtonQuiz.addEventListener('click', function accessibilityLoadQuiz() {
     container.appendChild(numberQuestion);
 
     const accessibilityQuestions = document.createElement('h2');
-    accessibilityQuestions.className = 'accessibility-questions';
+    accessibilityQuestions.className = 'section-quiz';
     accessibilityQuestions.innerHTML = `<h2>${accessibilityData[accessibilityCurrentQuestion].question}</h2>`;
     container.appendChild(accessibilityQuestions);
 
-    accessibilityData[accessibilityCurrentQuestion].alternatives.forEach(alternatives => {
+    accessibilityData[accessibilityCurrentQuestion].alternatives.forEach((alternatives, index) => {
         const buttonAlternative = document.createElement('button');
         buttonAlternative.className = 'button-answers';
-        buttonAlternative.innerHTML = alternatives;
+        buttonAlternative.textContent = alternatives;
         buttonAlternative.addEventListener('click', function () {
             acSelectedAnswerIndex = index;
             const allButtons = document.querySelectorAll('.button-answers');
@@ -90,6 +90,35 @@ acButtonQuiz.addEventListener('click', function accessibilityLoadQuiz() {
     container.appendChild(nextButton);
 
     nextButton.addEventListener('click', function () {
+        if(acSelectedAnswerIndex === null) {
+            alert('Please, select an answer');
+            return;
+        };
 
+        if(acSelectedAnswerIndex === accessibilityData[accessibilityCurrentQuestion].correct) {
+            accessibilityScore++;
+        };
+
+        const allButtons = document.querySelectorAll('.button-answers');
+        allButtons.forEach((button, index) => {
+            if(index === accessibilityData[accessibilityCurrentQuestion].correct) {
+                button.style.border = '2px solid green';
+            } else {
+                button.style.border = '2px solid red';
+            };
+        });
+
+        nextButton.disabled = true;
+
+        setTimeout(function() {
+            acSelectedAnswerIndex = null;
+            nextButton.disabled = false;
+            accessibilityCurrentQuestion++
+            if(accessibilityCurrentQuestion < accessibilityData.length) {
+                accessibilityLoadQuiz();
+            } else {
+                container.innerHTML = `<p class="results">Quiz completo! Pontuação: ${accessibilityScore}/${accessibilityData.length}</p>`;
+            };
+        }, 2000);
     });
 });

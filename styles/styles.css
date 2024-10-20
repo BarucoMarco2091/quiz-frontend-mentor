@@ -30,6 +30,7 @@ main #container #html .quiz-button-html {
   width: 70dvh;
   height: 8dvh;
   color: #fff;
+  font-family: "Rubik", sans-serif;
   font-size: 1.5rem;
   gap: 2dvh;
   border: none;
@@ -46,6 +47,7 @@ main #container #css .quiz-button-css {
   width: 70dvh;
   height: 8dvh;
   color: #fff;
+  font-family: "Rubik", sans-serif;
   font-size: 1.5rem;
   gap: 2dvh;
   border: none;
@@ -62,6 +64,7 @@ main #container #javascript .quiz-button-javascript {
   width: 70dvh;
   height: 8dvh;
   color: #fff;
+  font-family: "Rubik", sans-serif;
   font-size: 1.5rem;
   gap: 2dvh;
   border: none;
@@ -78,6 +81,7 @@ main #container #accessibility .quiz-button-accessibility {
   width: 70dvh;
   height: 8dvh;
   color: #fff;
+  font-family: "Rubik", sans-serif;
   font-size: 1.5rem;
   gap: 2dvh;
   border: none;
@@ -88,4 +92,59 @@ main #container #accessibility .quiz-button-accessibility {
 main #container #accessibility .quiz-button-accessibility i {
   color: rgba(233, 102, 233, 0.349);
   padding-right: 2dvh;
+}
+main #container .number-question {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  margin-top: 1rem;
+}
+main #container .section-quiz {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 2rem;
+}
+main #container .button-answers {
+  background-color: #384d66;
+  width: 70dvh;
+  height: 8dvh;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.2rem;
+  gap: 2dvh;
+  border: none;
+  border-radius: 2dvh;
+  margin-bottom: 3dvh;
+  cursor: pointer;
+}
+main #container .next-button {
+  background-color: #384d66;
+  width: 70dvh;
+  height: 8dvh;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  gap: 2dvh;
+  border: none;
+  border-radius: 2dvh;
+  margin-bottom: 3dvh;
+  cursor: pointer;
+}
+main #container .results {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+main #container .button-play-again {
+  background-color: #384d66;
+  width: 70dvh;
+  height: 8dvh;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  gap: 2dvh;
+  border: none;
+  border-radius: 2dvh;
+  margin-bottom: 3dvh;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
