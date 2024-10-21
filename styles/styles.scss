@@ -16,6 +16,11 @@ $invalid-color: #ee5454;
 body {
     background-color: $bg-col;
     background-image: url("../assets/images/dark.svg");
+
+    @media screen and (max-width: 480px) {
+        display: flex;
+        width: 100dvh;
+    }
 }
 
 main {
